@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Gulatree | Telehealth</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <style type="text/css">
+            .full {
+            width: 100%;
+        }
+
+        .gap {
+            height: 30px;
+            width: 100%;
+            clear: both;
+            display: block;
+        }
+
+        .footer {
+            background: #EDEFF1;
+            height: auto;
+            padding-bottom: 30px;
+            position: relative;
+            width: 100%;
+            border-bottom: 1px solid #CCCCCC;
+            border-top: 1px solid #DDDDDD;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        .footer img {
+            max-width: 100%;
+        }
+
+        .footer h3 {
+            border-bottom: 1px solid #BAC1C8;
+            color: #54697E;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 27px;
+            padding: 40px 0 10px;
+            text-transform: uppercase;
+        }
+
+        .footer ul {
+            font-size: 13px;
+            list-style-type: none;
+            margin-left: 0;
+            padding-left: 0;
+            margin-top: 15px;
+            color: #7F8C8D;
+        }
+
+        .footer ul li a {
+            padding: 0 0 5px 0;
+            display: block;
+        }
+
+        .footer a {
+            color: #78828D
+        }
+
+        .supportLi h4 {
+            font-size: 20px;
+            font-weight: lighter;
+            line-height: normal;
+            margin-bottom: 0 !important;
+            padding-bottom: 0;
+        }
+
+        .newsletter-box input#appendedInputButton {
+            background: #FFFFFF;
+            display: inline-block;
+            float: left;
+            height: 30px;
+            clear: both;
+            width: 100%;
+        }
+
+        .newsletter-box .btn {
+            border: medium none;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            -o-border-radius: 3px;
+            -ms-border-radius: 3px;
+            border-radius: 3px;
+            display: inline-block;
+            height: 40px;
+            padding: 0;
+            width: 100%;
+            color: #fff;
+        }
+
+        .newsletter-box {
+            overflow: hidden;
+        }
+
+        .bg-gray {
+            background-image: -moz-linear-gradient(center bottom, #BBBBBB 0%, #F0F0F0 100%);
+            box-shadow: 0 1px 0 #B4B3B3;
+        }
+
+        .social li {
+            background: none repeat scroll 0 0 #B5B5B5;
+            border: 2px solid #B5B5B5;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -o-border-radius: 50%;
+            -ms-border-radius: 50%;
+            border-radius: 50%;
+            float: left;
+            height: 36px;
+            line-height: 36px;
+            margin: 0 8px 0 0;
+            padding: 0;
+            text-align: center;
+            width: 36px;
+            transition: all 0.5s ease 0s;
+            -moz-transition: all 0.5s ease 0s;
+            -webkit-transition: all 0.5s ease 0s;
+            -ms-transition: all 0.5s ease 0s;
+            -o-transition: all 0.5s ease 0s;
+        }
+
+        .social li:hover {
+            transform: scale(1.15) rotate(360deg);
+            -webkit-transform: scale(1.1) rotate(360deg);
+            -moz-transform: scale(1.1) rotate(360deg);
+            -ms-transform: scale(1.1) rotate(360deg);
+            -o-transform: scale(1.1) rotate(360deg);
+        }
+
+        .social li a {
+            color: #EDEFF1;
+        }
+
+        .social li:hover {
+            border: 2px solid #2c3e50;
+            background: #2c3e50;
+        }
+
+        .social li a i {
+            font-size: 16px;
+            margin: 0 0 0 5px;
+            color: #EDEFF1 !important;
+        }
+
+        .footer-bottom {
+            background: #E3E3E3;
+            border-top: 1px solid #DDDDDD;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .footer-bottom p.pull-left {
+            padding-top: 6px;
+        }
+
+        .payments {
+            font-size: 1.5em;
+        }
+
+        .navbar-brand {
+            width: 70px;
+            height: 50px;
+            background: url('http://www.sneaker-mission.com/uploads/3/1/2/7/31279819/5617441.png') no-repeat center center;
+            background-size: 50px;
+        }
+
+        .nav-tabs {
+            display: inline-block;
+            border-bottom: none;
+            padding-top: 15px;
+            font-weight: bold;
+        }
+
+        .nav-tabs>li>a,
+        .nav-tabs>li>a:hover,
+        .nav-tabs>li>a:focus,
+        .nav-tabs>li.active>a,
+        .nav-tabs>li.active>a:hover,
+        .nav-tabs>li.active>a:focus {
+            border: none;
+            border-radius: 0;
+        }
+
+        .nav-list {
+            border-bottom: px solid #eee;
+        }
+
+        .nav-list>li {
+            padding: 20px 15px 15px;
+        }
+
+        .nav-list>li:last-child {
+            border-right: 0px solid #eee;
+        }
+
+        .nav-list>li>a:hover {
+            text-decoration: none;
+        }
+
+        .nav-list>li>a>span {
+            display: block;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .mega-dropdown {
+            position: static !important;
+        }
+
+        .mega-dropdown-menu {
+            padding: 20px 15px 15px;
+            text-align: center;
+            width: 100%;
+        }
+
+        #login-dp {
+            min-width: 250px;
+            padding: 14px 14px 0;
+            overflow: hidden;
+            background-color: rgba(255, 255, 255, .8);
+        }
+
+        #login-dp .help-block {
+            font-size: 12px
+        }
+
+        #login-dp .bottom {
+            background-color: rgba(255, 255, 255, .8);
+            border-top: 1px solid #ddd;
+            clear: both;
+            padding: 14px;
+        }
+
+        #login-dp .social-buttons {
+            margin: 12px 0
+        }
+
+        #login-dp .social-buttons a {
+            width: 49%;
+        }
+
+        #login-dp .form-group {
+            margin-bottom: 10px;
+        }
+
+        .btn-fb {
+            color: #fff;
+            background-color: #3b5998;
+        }
+
+        .btn-fb:hover {
+            color: #fff;
+            background-color: #496ebc
+        }
+
+        .btn-tw {
+            color: #fff;
+            background-color: #55acee;
+        }
+
+        .btn-tw:hover {
+            color: #fff;
+            background-color: #59b5fa;
+        }
+
+        @media(max-width:768px) {
+            #login-dp {
+                background-color: inherit;
+                color: #fff;
+            }
+            #login-dp .bottom {
+                background-color: inherit;
+                border-top: 0 none;
+            }
+        }
+
+        .navbar-login {
+            width: 305px;
+            padding: 10px;
+            padding-bottom: 0px;
+        }
+
+        .navbar-login-session {
+            padding: 10px;
+            padding-bottom: 0px;
+            padding-top: 0px;
+        }
+
+        .icon-size {
+            font-size: 87px;
+        }
+
+        .navbar-nav {
+            padding-left: 15px;
+        }
+
+        .navbar-default .navbar-collapse,
+        .navbar-default .navbar-form {
+            border-color: #00486c;
+        }
+
+        .container-fluid {
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+            background-color: rgb(51, 79, 111);
+        }
+
+        .navbar-default .navbar-nav>.active>a,
+        .navbar-default .navbar-nav>.active>a:hover,
+        .navbar-default .navbar-nav>.active>a:focus {
+            color: white;
+            background-color: #black;
+        }
+
+        .navbar-default .navbar-nav>li>a {
+            color: white;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0px;
+            z-index: 1000;
+            display: none;
+            float: left;
+            min-width: 160px;
+            padding: 5px 0px;
+            margin: 2px 0px 0px;
+            font-size: 14px;
+            list-style: none;
+            background-color: white;
+            -webkit-background-clip: padding-box;
+            background-clip: padding-box;
+            border: 1px solid rgba(0, 0, 0, 0.14902);
+            border-image-source: initial;
+            border-image-slice: initial;
+            border-image-width: initial;
+            border-image-outset: initial;
+            border-image-repeat: initial;
+            border-radius: 4px;
+            box-shadow: rgba(0, 0, 0, 0.172549) 0px 6px 12px;
+        }
+
+        .nav-list>li {
+            padding: 20px 15px 15px;
+            border-left: 0px;
+            .nav-list {
+                border-bottom: 0px;
+            }
+            .nav-tabs>li.active>a,
+            .nav-tabs>li.active>a:hover,
+            .nav-tabs>li.active>a:focus {
+                color: white;
+                cursor: default;
+                background-color: #428bca;
+            }
+            .nav-tabs>li.active>a,
+            .nav-tabs>li.active>a:hover,
+            .nav-tabs>li.active>a:focus {
+                color: black;
+                cursor: default;
+                background-color: rgb(255, 255, 255);
+                border: solid black 1px;
+            }
+            body {
+                padding-top: 20px;
+            }
+            #myCarousel .nav a small {
+                display: block;
+            }
+            #myCarousel .nav {
+                background: #eee;
+            }
+            .nav-justified>li>a {
+                border-radius: 0px;
+            }
+            .nav-pills>li[data-slide-to="0"].active a {
+                background-color: #16a085;
+            }
+            .nav-pills>li[data-slide-to="1"].active a {
+                background-color: #e67e22;
+            }
+            .nav-pills>li[data-slide-to="2"].active a {
+                background-color: #2980b9;
+            }
+            .nav-pills>li[data-slide-to="3"].active a {
+                background-color: #8e44ad;
+            }
+    </style>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <link rel="stylesheet" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">
+
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="navbar-collapse style= collapse in" id="bs-megadropdown-tabs" style="
+    padding-left: 0px;
+">
+                <ul class="nav navbar-nav">
+                    <li><a href="#"><i class="fa fa-globe"></i> Gulatree </a></li>
+                    <li><a href="https://apprtc.appspot.com/"><i class="fa fa-university"></i> Speak to a Doctor Now </a></li>
+
+                    <li class="dropdown mega-dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-space-shuttle"></i> Services <span class="caret"></span></a>
+                        <div id="filters" class="dropdown-menu mega-dropdown-menu">
+                            <div class="container-fluid2">
+                                <!-- Tab panes -->
+                                <div class="tab-content">
+
+
+                                    <div class="tab-pane active" id="kids">
+                                        <ul class="nav-list list-inline">
+                                            <li>
+                                                <a data-filter=".89" href="#"><img src="https://s3-us-west-1.amazonaws.com/gulatree.com/3839729189_4890694e58_m.jpg"><span>Dermatology</span></a>
+                                            </li>
+                                            <li>
+                                                <a data-filter=".97" href="#"><img src="https://s3-us-west-1.amazonaws.com/gulatree.com/5261400641_e29025abf9_m.jpg"><span>Radiology</span></a>
+                                            </li>
+                                            <li>
+                                                <a data-filter=".96" href="#"><img src="https://s3-us-west-1.amazonaws.com/gulatree.com/5261400641_e29025abf9_m.jpg"><span>Psychiatry</span></a>
+                                            </li>
+                                            <li>
+                                                <a data-filter=".87" href="#"><img src="https://s3-us-west-1.amazonaws.com/gulatree.com/5261400641_e29025abf9_m.jpg"><span>Internal Medicine</span></a>
+                                            </li>
+                                            <li>
+                                                <a data-filter=".85" href="#"><img src="https://s3-us-west-1.amazonaws.com/gulatree.com/5261400641_e29025abf9_m.jpg"><span>Emergency Room</span></a>
+                                            </li>
+                                            <li>
+                                                <a data-filter=".90" href="#"><img src="https://s3-us-west-1.amazonaws.com/gulatree.com/5261400641_e29025abf9_m.jpg"><span>Lab</span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="tab-pane" id="sports">
+                                        <ul class="nav-list list-inline">
+                                            <li>
+                                                <a data-filter=".38" href="#"><img src="/Users/stephensizensky/Desktop/Gulatreewebsite2/images/5261400641_e29025abf9_m.jpg"><span>Scheduling</span></a>
+                                            </li>
+                                            <li>
+                                                <a data-filter=".41" href="#"><img src="/Users/stephensizensky/Desktop/Gulatreewebsite2/images/5261400641_e29025abf9_m.jpg"><span>Insurance Reimbursement</span></a>
+                                            </li>
+                                            <li>
+                                                <a data-filter=".62" href="#"><img src="/Users/stephensizensky/Desktop/Gulatreewebsite2/images/5261400641_e29025abf9_m.jpg"><span>Telehealth Integration</span></a>
+                                            </li>
+                                            <li>
+                                                <a data-filter=".82" href="#"><img src="/Users/stephensizensky/Desktop/Gulatreewebsite2/images/5261400641_e29025abf9_m.jpg"><span>Tools</span></a>
+                                            </li>
+                                            <li>
+                                                <a data-filter=".93" href="#"><img src="/Users/stephensizensky/Desktop/Gulatreewebsite2/images/5261400641_e29025abf9_m.jpg"><span>Employer Partnerships</span></a>
+                                            </li>
+                                            <li>
+                                                <a data-filter=".94" href="#"><img src="/Users/stephensizensky/Desktop/Gulatreewebsite2/images/5261400641_e29025abf9_m.jpg"><span>Interstate Practice</span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li class="active"><a href="#kids" role="tab" data-toggle="tab">Patients</a></li>
+                                <li><a href="#sports" role="tab" data-toggle="tab">Healthcare Providers</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-user"></span>
+                            <strong>Patient ID Profile</strong>
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        </a>
+                        <ul style="background-color:white;" class="dropdown-menu">
+                            <li>
+                                <div class="navbar-login">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <p class="text-center">
+                                                <span class="glyphicon glyphicon-user icon-size"></span>
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <p class="text-left"><strong>Patient ID Name</strong></p>
+                                            <p class="text-left small">Member ID #</p>
+                                            <p class="text-left">
+                                                <a href="https://s3-us-west-1.amazonaws.com/gulatree.com/profile.html">Account</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <div class="navbar-login navbar-login-session">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <p>
+                                                <a href="#" class="btn btn-danger btn-block">Logout</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Patient SIGN IN <span class="caret"></span></a>
+                        <ul id="login-dp" class="dropdown-menu">
+                            <li>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        Enter your member identification number and password to login if a returning user
+                                        <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                            <div class="form-group">
+                                                <label class="sr-only" for="exampleInputEmail2">User Id</label>
+                                                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Member Identification Number" required="">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="sr-only" for="exampleInputPassword2">Password</label>
+                                                <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required="">
+                                                <div class="help-block text-right"><a href="https://s3-us-west-1.amazonaws.com/gulatree.com/forgotpassword.html">Forget the password ?</a></div>
+                                            </div>
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label>
+											 <input type="checkbox"> keep me logged-in
+											 </label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="bottom text-center">
+                                      Using Member Card First Time? <a href="https://s3-us-west-1.amazonaws.com/gulatree.com/joinus.html"><b>Register Card here</b></a>
+                                      <div class="bottom text-center">
+                                        No employer coverage or Medical Insurance <a href="https://s3-us-west-1.amazonaws.com/gulatree.com/individual.html"><b>Register here</b></a>
+                                    </div>
+                                </div>
+                              </div>
+
+                            </li>
+
+                        </ul>
+                    </li>
+                </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <div>
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="container">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="https://s3-us-west-1.amazonaws.com/gulatree.com/28424692994_5c79da3d80_k.jpg">
+                    <div class="carousel-caption">
+                        <h3>A new branch of Healthcare</h3>
+                        <p>Gulatree is a healthcare medium where accessibility to well-being is always possible. We aim to deliver medical care across all barriers worldwide by providing a telehealth platform.
+
+                        </p>
+                    </div>
+                </div>
+                <!-- End Item -->
+                <div class="item">
+                    <img src="https://s3-us-west-1.amazonaws.com/gulatree.com/30434581780_5c1a932c1a_k.jpg">
+                    <div class="carousel-caption">
+                        <h3>Convenience and Necessity</h3>
+                        <p>Gulatree helps with claims, scheduling, patient portal, EHR, ePrescribe a all in one platform, medical charting, automated patient engagement emails, Triage etc.</p>
+                    </div>
+                </div>
+                <!-- End Item -->
+                <div class="item">
+                    <img src="https://s3-us-west-1.amazonaws.com/gulatree.com/28940583070_0ff116f81f_k.jpg">
+                    <div class="carousel-caption">
+                        <h3>Patented not in the Cloud Technology for optimization of care </h3>
+                        <p>Our patented technology results in a low bandwidth HIPPA compliant one of a kind video consultation. We a easily integratable into several healthBots. A secure opensource HIPPA compliant security measure first.
+                            </p>
+                    </div>
+                </div>
+                <!-- End Item -->
+                <div class="item">
+                    <img src="https://s3-us-west-1.amazonaws.com/gulatree.com/Screen+Shot+2017-03-28+at+3.17.45+PM.png">
+                    <div class="carousel-caption">
+                        <h3>Personalized Data and Healthcare treatment statistics in one, Search for provider treatment on Medicare reimbursement near you, Lab Results, Tests in one platform.</h3>
+                        <p>
+                            Automated Datasets help you optimize health with all of your devices across the platform. gulaAmbulatory 1</p>
+                    </div>
+                </div>
+                <!-- End Item -->
+            </div>
+            <!-- End Carousel Inner -->
+            <ul class="nav nav-pills nav-justified">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"><a href="#">Who We Are</a></li>
+                <li data-target="#myCarousel" data-slide-to="1"><a href="#">Patients and Providers</a></li>
+                <li data-target="#myCarousel" data-slide-to="2"><a href="#">Device Integration</a></li>
+                <li data-target="#myCarousel" data-slide-to="3"><a href="#">Personalized Medicine</a></li>
+            </ul>
+        </div>
+        <!-- End Carousel -->
+    </div>
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".dropdown").hover(
+                function() {
+                    $('.dropdown-menu', this).stop(true, true).slideDown("fast");
+                    $(this).toggleClass('open');
+                },
+                function() {
+                    $('.dropdown-menu', this).stop(true, true).slideUp("fast");
+                    $(this).toggleClass('open');
+                }
+            );
+        });
+
+        $(document).ready(function() {
+            $('#myCarousel').carousel({
+                interval: 4000
+            });
+
+            var clickEvent = false;
+            $('#myCarousel').on('click', '.nav a', function() {
+                clickEvent = true;
+                $('.nav li').removeClass('active');
+                $(this).parent().addClass('active');
+            }).on('slid.bs.carousel', function(e) {
+                if (!clickEvent) {
+                    var count = $('.nav').children().length - 1;
+                    var current = $('.nav li.active');
+                    current.removeClass('active').next().addClass('active');
+                    var id = parseInt(current.data('slide-to'));
+                    if (count == id) {
+                        $('.nav li').first().addClass('active');
+                    }
+                }
+                clickEvent = false;
+            });
+        });
+    </script>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <footer>
+        <div class="footer" id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+                        <h3>ORGANIZATION</h3>
+                        <ul>
+                            <li> <a href="https://s3-us-west-1.amazonaws.com/gulatree.com/aboutus.html">Gulatree Team</a> </li>
+                            <li> <a href="https://s3-us-west-1.amazonaws.com/gulatree.com/healthcareteam.html">Healthcare Provider Team</a> </li>
+                            <li> <a href="https://s3-us-west-1.amazonaws.com/gulatree.com/careers.html">Gulatree Careers</a> </li>
+                            <li> <a href="https://s3-us-west-1.amazonaws.com/gulatree.com/blog.html">Gulatree News</a> </li>
+                            <li> <a href="https://s3-us-west-1.amazonaws.com/gulatree.com/mobile.html">Mobile App</a> </li>
+                            <li> <a href="https://s3-us-west-1.amazonaws.com/gulatree.com/FAQ's.html"> FAQ's </a> </li>
+
+                        </ul>
+                    </div>
+                    <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+                        <h3>Privacy & Terms</h3>
+                        <ul>
+                            <li><a href="https://s3-us-west-1.amazonaws.com/gulatree.com/privacy.html">Privacy Policy</a></li>
+                            <li><a href="https://s3-us-west-1.amazonaws.com/gulatree.com/HIPPA.html">Gulatree HIPPA</a></li>
+                            <li><a href="https://s3-us-west-1.amazonaws.com/gulatree.com/Terms+of+Service.html">Gulatree Terms of Service</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+                        <h3> Contact </h3>
+                        <ul>
+                            <li> <a href="https://s3-us-west-1.amazonaws.com/gulatree.com/support.html">Speak to a Gulatree Specialist now</a> </li>
+                            <li> <a href="https://s3-us-west-1.amazonaws.com/gulatree.com/media.html">Media and Press Inquries</a> </li>
+                            <li><a href="https://s3-us-west-1.amazonaws.com/gulatree.com/investing.html">Investing in Gulatree</a></li>
+                            <li><a href="https://s3-us-west-1.amazonaws.com/gulatree.com/partnerships.html">Gulatree Employer Partnerships</a></li>
+                            <li><a href="https://s3-us-west-1.amazonaws.com/gulatree.com/practiceintegration.html">Gulatree Practice Integration</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+                        <h3>Gulatree Beta Programs</h3>
+                        <ul>
+                          <li><a href="https://s3-us-west-1.amazonaws.com/gulatree.com/Caduceus.html">Gulatree Caduceus Program</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3  col-md-3 col-sm-6 col-xs-12 ">
+                        <h3> Social Media </h3>
+                        <ul>
+                            <li>
+                                <div class="input-append newsletter-box text-center">
+                                    <input type="text" class="full text-center" placeholder="Share with Friends ">
+                                    <button class="btn  bg-gray" type="button"> Social Media <i class="fa fa-long-arrow-right"> </i> </button>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="social">
+                            <li>
+                                <a href="#"> <i class=" fa fa-facebook">   </i> </a>
+                            </li>
+                            <li>
+                                <a href="#"> <i class="fa fa-twitter">   </i> </a>
+                            </li>
+                            <li>
+                                <a href="#"> <i class="fa fa-google-plus">   </i> </a>
+                            </li>
+                            <li>
+                                <a href="#"> <i class="fa fa-pinterest">   </i> </a>
+                            </li>
+                            <li>
+                                <a href="#"> <i class="fa fa-youtube">   </i> </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--/.row-->
+            </div>
+            <!--/.container-->
+        </div>
+        <!--/.footer-->
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="pull-left"> Copyright ©Gulatree, Inc. All right reserved. </p>
+                <div class="pull-right">
+                    <ul class="nav nav-pills payments">
+                        <li><i class="fa fa-cc-visa"></i></li>
+                        <li><i class="fa fa-cc-mastercard"></i></li>
+                        <li><i class="fa fa-cc-amex"></i></li>
+                        <li><i class="fa fa-cc-paypal"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--/.footer-bottom-->
+    </footer>
+    <script type="text/javascript">
+    </script>
+</body>
+
+</html>
